@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Final Work blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Final Work</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Welke chatbot kiezen</h1>
+                        <h2 class="subheading">Deel 1</h2>
+                        <span class="meta">Posted by
+                            Nicolas Pecher
+                            on December 14, 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <h2 class="section-heading">Welke chatbot kiezen?</h2>
+
+                    <p>
+                        Er bestaan een hele hoop chatbot frameworks, om een gepast framework te kiezen heb ik hierover
+                        een heel compleet artikel gevonden, waarin alles staat dat ik nodig heb. Hier is er een link
+                        naar <a href="https://discover.bot/bot-talk/guide-to-bot-frameworks/"> dit artikel </a>.
+                    </p>
+                    <p>
+                        Chatbots kunnen voor allerhande zaken dienen, waarvan commerce, customer service en enterprise
+                        zaken een groot deel uit maken. Dit is niet een probleem, maar ik zal waarschijnlijk niet voor
+                        een framework kiezen dat hiernaar gericht is. Categorieën dat volgens mij veel beter passen bij
+                        mijn doel zijn de information en service categorieën.
+                    </p>
+                    <p>
+                        In mijn keuze naar een chatbot hecht ik ook veel belang aan de pricing, mijn doel is immers om
+                        een proof of concept te maken van een chatbot dat als opleidingsadviseur dient. Ik wens dus mijn
+                        project te kunnen deployen op een website of in een messaging applicatie (messenger, slack,
+                        whatsapp) zonder (of met heel weinig) kosten.
+                    </p>
+                    <p>
+                        Van school krijgen de leerlingen een toegang tot AWS dit is al een goed argument om deze
+                        platform te gebruiken aangezien Amazon Lex een heel bekend framework is en ik al een beetje
+                        gewerkt heb met de andere AWS-services. Daarnaast zou ik toch graag een open source framework
+                        gebruiken zodanig dat ik en maxime in onze verslagen een open-source framework kunnen
+                        vergelijken met een niet-open-source framework.
+                    </p>
+                    <p>
+                        Een ander belangrijk criteria is de moeilijkheidsgraad, het gemak van gebruik. Hoe
+                        gemakkelijk/snel kan ik een goed werkende chatbot deployen.
+                    </p>
+
+                    <h2 class="section-heading">Interessante chatbot frameworks</h2>
+
+                    <p>
+                        Na het lezen van het hierboven vermeldde artikel zijn er enkele chatbot frameworks die mijn
+                        aandacht aangetrokken hebben. Deze chatbots zal ik allemaal één per één uittesten. Ik zal
+                        natuurlijk niet gaan tot het deployen van een test chatbot met elke framework, dit zou veel te
+                        veel werk zijn en mijn hoofddoel is nu om zo snel mogelijk een goed passende framework te vinden
+                        om te beginnen met het maken van de proof of concept.
+                    </p>
+                    <p>Lijst frameworks:</p>
+                    <ul>
+                        <li>Amazon Lex</li>
+                        <li>Google Dialogflow</li>
+                        <li>Botkit</li>
+                        <li>Rasa</li>
+                        <li>Wit.ai</li>
+                    </ul>
+                    <h3 class="section-heading">Amazon Lex</h3>
+                    <p>
+                        Zoals voordien vermeldt heb ik een AWS-account waarmee ik toegang heb tot Amazon Lex. Ik heb
+                        deze dus snel een beetje uitgetest. De interface is gelijkaardig met de andere AWS-applicaties
+                        dit zorgt ervoor dat ik de logica hiervan al een beetje ken en dus waarschijnlijk dierdoor tijd
+                        ga kunnen winnen.
+                    </p>
+                    <p>
+                        Het is zeer eenvoudig om een heel kleine chatbot op te starten (via blueprint) en alles dat ik
+                        geprobeerd heb werkt zoals verwacht.
+                    </p>
+                    <p>
+                        Ik heb ook snel eens het deployment proces bekeken en het ziet er niet heel eenvoudig uit. We
+                        moeten eerst onze chatbot builden daarna publishen en hierna moeten we verder werken met een
+                        andere AWS-service dat ervoor zorgt dat het gedeployed wordt. Deployen op een website blijkt ook
+                        niet iets te zijn dat heel vaak gedaan wordt aangezien de basesopties mij enkel de mogelijkheid
+                        geven om op een messaging applicatie of op een mobiele app te deployen.
+                    </p>
+
+                    <h3 class="section-heading">Botkit (open source)</h3>
+
+                    <p>
+                        Botkit is een heel verschillend soort framework. Op de site van Botkit wordt het eigenlijk
+                        beschreven als een node.js app gemaakt met de Botkit core library, een basic webserver,
+                        applicatie logic en plugins die samengebracht werden. Ik heb Botkit dus geïnstalleerd en
+                        uitgeprobeerd.
+                    </p>
+                    <p>
+                        Met Botkit hebben we geen interface, alles wat we doen gebeurt in de code. Dat maakt het voor
+                        mij heel moeilijk om te weten wat ik exact kan doen en wat niet. Volgens mij kunnen wij hiermee
+                        heel gemakkelijk personaliseren en een mooi design maken, maar de moeilijkheidsgraad ligt hier
+                        een pak hoger dan met Amazon Lex bijvoorbeeld. Ik moet namelijk heel de documentatie doorlopen
+                        en zal waarschijnlijk een tijdje moeten zoeken naar hoe ik een test chatbot kan maken dat niet
+                        helemaal hardcoded is. Ik ben er niet van overtuigd dat dit soort chatbot framework de goede
+                        keuze is.
+                    </p>
+                    <p>
+                        Na deze test heb ik verder gezocht naar informatie over dit framework. Blijkbaar werd Botkit in
+                        het verleden vooral gebruikt voor Slack bots. Hierna heeft het zich uitgebreid naar andere
+                        platformen. Onlangs werd Botkit overgenomen door Microsoft, dit zorgt ervoor dat er aangeraden
+                        wordt om het te gebruiken in combinatie met de Microsoftservices. Daarbij moeten wij zelf onze
+                        NLP-engine (dit dient om woorden, zinsconstructie, doelen te herkennen) kiezen dit kan komen van
+                        Amazon Lex, IBM Watson Assistant, Wit.ai en Microsoft LUIS.
+                    </p>
+                    <p>Het artikel dat ik gevonden heb:<a
+                            href="https://discover.bot/bot-talk/guide-to-bot-frameworks/botkit/">https://discover.bot/bot-talk/guide-to-bot-frameworks/botkit/</a>
+                    </p>
+                    <p>
+                        Dit chatbot lijkt niet te zijn wat ik nodig heb en gaat dit project volgens mij nutteloos
+                        moeilijker maken, ik ga om deze redenen niet voor dit framework kiezen.
+                    </p>
+                    <p>
+                        Zoals u het gezien heeft is dit het eerste deel van mijn zoektocht naar het passende chatbot
+                        framework. Ik zal ervoor zorgen dat het vervolg zo snel mogelijk op onze blog komt.
+                    </p>
+                    <p>
+                        Bedankt voor het lezen.
+                    </p>
+                    <p>Nicolas Pecher</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <p class="copyright text-muted">Copyright &copy; Final-work blog 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
