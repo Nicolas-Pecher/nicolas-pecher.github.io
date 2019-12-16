@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Final Work blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Final Work</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Welke chatbot kiezen</h1>
+                        <h2 class="subheading">Deel 2</h2>
+                        <span class="meta">Posted by
+                            Nicolas Pecher
+                            on December 14, 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <h2 class="section-heading">Samenvatting en vervolg </h2>
+
+                    <p>
+                        Dit is het vervolg van mijn zoektocht naar het chatbot framework dat ik zal gebruiken voor mijn
+                        chatbot. In het eerste deel heb ik uitgelegd welke criteria ik gebruikt heb om een selectie te
+                        maken van potentiele chatbot frameworks. Ik heb hiervoor gebruik gemaakt van een heel goed
+                        artikel dat ik <a href="https://discover.bot/bot-talk/guide-to-bot-frameworks/"> hier</a>
+                        terugzet.
+                    </p>
+
+                    <p>
+                        Dit is de lijst van de chatbots dat zal uitproberen of al uitgeprobeerd heb:
+                    </p>
+                    <ul>
+                        <li>Amazon Lex</li>
+                        <li>Google Dialogflow</li>
+                        <li>Botkit</li>
+                        <li>Rasa</li>
+                        <li>Wit.ai</li>
+                    </ul>
+                    <p>
+                        Amazon Lex en Botkit heb ik in het vorig deel al besproken, we gaan nu dus verder gaan met de
+                        overige frameworks.
+                    </p>
+                    <h2 class="section-heading">Dialogflow</h2>
+
+                    <p>
+                        Om dialogflow te kunnen gebruiken is het zeer eenvoudig. Er wordt gewoon gevraagd naar uw google
+                        login en het is klaar. We krijgen daarna een control pannel te zien met alles dat wij nodig
+                        hebben om deze chatbot te maken. Dialogflow maakt deel uit van het Google Cloud Platform, wat
+                        wij hierop terugvinden is heel sterk vergelijkbaar met wat we op AWS en Microsoft Azure kunnen
+                        vinden (Hosting, databeheer, API’s, AI en zo voort).
+                    </p>
+                    <p>
+                        Ik heb dus zoals voor Lex en Botkit een kleine chatbot gemaakt. Ik moet toegeven dat ik heel
+                        sterk verbaasd ben van hoe gemakkelijk ik deze heb kunnen deployen op een webpagina. Ik heb
+                        letterlijk op twee knoppen moeten drukken en een iFrame moeten plakken op mijn webpagina en het
+                        is klaar. Ik heb meteen berichten kunnen sturen en alles werkt perfect.
+                    </p>
+                    <p>
+                        Na het uittesten van een simpele bot vraag ik me wel af of dialogflow een heel complex gesprek
+                        aan zou kunnen. Ik zou bijvoorbeeld graag willen dat de chatbot vorige antwoorden bijhoudt.
+                        Aangezien dit framework mij heel sterk interesseert heb ik een beetje verder getest en heb ik
+                        een chatbot proberen te maken dat een naam kan onthouden. Ik heb deze heel eenvoudige chatbot
+                        kunnen deployen en heb hem dus in dit artikel geplaatst. Om hem uit te testen moet u enkel “hi”
+                        of “hello” typen.
+                    </p>
+                    <p>
+                        Na deze test is er nog steeds een vraag die ik mij stel, namelijk kan ik met deze chatbot wel
+                        een decision tree maken. Hiermee bedoel ik zou ik de chatbot kunnen laten vragen of de gebruiker
+                        een mop wil horen en in functie van het antwoord de mop tonen of niet. Of meer in verband met
+                        mijn project zou ik bijvoorbeeld aan de gebruiker kunnen vragen of hij het verschil kent tussen
+                        een professionele en een academische bachelor en in functie van het antwoord een verschillend
+                        antwoord geven van de chatbot.
+                    </p>
+                    <p>
+                        Ik heb ook verder informatie gelezen over dialogflow. Hieruit heb ik twee interessante zaken
+                        kunnen trekken namelijk dat als we meer controle willen hebben over de integratie het aangeraden
+                        is om de API te gebruiken in plaats van de 1-klik integratie, zonder dit te doen is het niet
+                        mogelijk om de chatbot de conversatie te laten starten (de chatbot kan enkel reageren op
+                        triggers, hij kan de conversatie dus niet beginnen met “hallo mijn naam is chatbot…” zonder dat
+                        de gebruiker eerst een bericht stuurt). Daarnaast kan Dialogflow beschouwd worden als een
+                        chatbot framework voor beginners, niet programmeurs. Volgens mij is het de bedoeling van het
+                        eindwerk om een zekere moeilijkheidsgraad te hebben en te bewijzen dat ik een volwaardige
+                        programmeur ben, het zou dus spijtig zijn om voor een te gemakkelijke en misschien te beperkte
+                        framework te kiezen.
+                    </p>
+
+                    <iframe width="350" height="430" allow="microphone;" style="transform: translate(-50%);margin-left: 50%;"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/57235d72-bcc1-425b-92f7-c06aa7332e1b"></iframe>
+
+                    <h2 class="section-heading">RASA</h2>
+
+                    <p>
+                        Zoals met Botkit wordt RASA via de CLI geïnstalleerd. Om de installatie te kunnen maken hebben
+                        wij tensorflow nodig, hierdoor moeten wij ook Python en Pip op ons systeem installeren indien
+                        wij het nog niet hebben. Rasa Open Source is de core van RASA-chatbots, we kunnen ook gebruik
+                        maken van Rasa X dat het veel eenvoudiger maakt om discussies te maken, te inspecteren en er
+                        training data van te maken door een UI te voorzien. Rasa X is wel niet open source.
+                    </p>
+                    <p>
+                        Ik heb bij de installatie al enkele problemen gehad en enkel de installatie heeft mij zeker meer
+                        dan 45 min genomen. Daarna ben ik begonnen met de getting started tutorial. De
+                        moeilijkheidsgraad is hier vergelijkbaar met het Botkit framework. Maar de documentatie van dit
+                        framework is heel correct en dit helpt veel. De interface van Rasa X ziet er heel goed en modern
+                        uit. De werking van het framework wordt hierdoor veel duidelijker en het maken van een
+                        eenvoudige chatbot is redelijk gemakkelijk eens wij begrepen hebben hoe het werkt.
+                    </p>
+                    <p>
+                        Dit framework zorgt ervoor dat wij een heel gemakkelijk aanpasbare chatbot kunnen maken. Er is
+                        ook een minimum kennis van programmatie nodig. Voor het deployen is het met Rasa veel moeilijker
+                        dan met de cloud services van AWS, tensorflow en Microsoft we moeten namelijk de app kunnen
+                        runnen op een server. De app wordt dan een rest API dat de antwoorden stuurt. Hierna moeten wij
+                        de data opnemen en in een chatbot lay-out teruggieten als wij de chatbot op een website willen
+                        gebruiken alleszins.
+                    </p>
+
+                    <h2 class="section-heading">Wit.ai</h2>
+
+                    <p>
+                        Wit.ai ziet er heel simpel uit t.o.v. alle andere frameworks dat ik uitgeprobeerd heb. De focus
+                        ligt op deze applicatie vanaf het begin op het snel maken van een chatbot dat de context waarin
+                        hij gebruikt wordt begrijpt. Op de hoofdpagina dat “understanding” heet moet de gebruiker
+                        voorbeeldzinnen aangeven dat de chatbot moet begrijpen, in deze zin moet de gebruiker dan
+                        aangeven welke woorden de belangrijke informatie (intents) zijn. Bijvoorbeeld als ik schrijf:
+                        “mijn naam is nicolas” dan moet ik aangeven dat nicolas het belangrijk deel is of zal de chatbot
+                        al opmerken dat dit een naam is.
+                    </p>
+                    <p>
+                        Wat ook opvalt is dat ik niet meteen kan zien waar ik de antwoorden op een intent moet ingeven.
+                        Ik zie ook niet waar ik mijn chatbot kan testen om te zien of hij antwoord wat ik verwacht.
+                    </p>
+                    <p>
+                        Na verder lezen blijkt dat wit.ai enkel gebruikt wordt om intents te formuleren en om een
+                        chatbot te trainen. Hierna moeten wij gebruik maken van een andere service dat zich bezighoudt
+                        met het discussie aspect van de chatbot.
+                    </p>
+                    <p>
+                        Volgens mij is het om deze reden eenvoudiger om Rasa te gebruiken dat de twee bij elkaar heeft,
+                        deels open source is en heel gemakkelijk aanpasbaar is. Ookal is het intent gedeelte van Wit.ai
+                        zeer intuitief en snel.
+                    </p>
+
+                    <h2 class="section-heading">Afsluiting</h2>
+                    <p>
+                        In het derde en laatste deel zal ik een keuze maken tussen alle geteste framework. Hierna zal ik
+                        kunnen beginnen met het praktisch gedeelte van het project. Voor het moment zijn mijn lieveling
+                        frameworks AWS Lex, Dialogflow en RASA. Ik zal deze keuzes proberen te argumenteren en voor elk
+                        framework voor- en nadelen opsommen. Voor ik een definitieve keuze maak zou ik toch graag snel
+                        Botpress uitproberen dat ik enkele keren heb zien tevoorschijn komen in de artikels dat ik
+                        gelezen heb sinds mijn keuze voor de 5 frameworks dat ik tot nu toe uitgeprobeerd heb.
+                    </p>
+
+                    
+                    <p>
+                        Bedankt voor het lezen.
+                    </p>
+                    <p>Nicolas Pecher</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <p class="copyright text-muted">Copyright &copy; Final-work blog 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
