@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Final Work blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Final Work</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Welke chatbot kiezen</h1>
+                        <h2 class="subheading">Deel 3</h2>
+                        <span class="meta">Posted by
+                            Nicolas Pecher
+                            on December 23, 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <h2 class="section-heading">Introductie</h2>
+
+                    <p>
+                        Dit is het laatste deel van mijn vooronderzoek wat de keuze van een chatbot framework betreft.
+                        In dit deel zal ik nog een laatste framework testen, dit framework is botpress. Hierna zal ik de
+                        voor- en nadelen van elk framework dat ik uitgeprobeert heb oplijsten. Op basis hiervan zal ik
+                        het meest gepaste framework gebruiken om mijn chatbot te maken dat als opleidingsadvizeur zal
+                        dienen.
+                    </p>
+                    <h2 class="section-heading">Botpress</h2>
+
+                    <p>
+                        Botpress in een open source chatbot building platform. Om Botpress te gebruiken moeten wij een
+                        app installeren deze app start zich op in de browser. We kunnen Botpress dus locaal runnen, het
+                        is ook mogelijk om op de cloud tu runnen of op uw eigen server.
+                    </p>
+                    <p>
+                        Botpress is gemakkelijk te gebruiken en we kunnen heel snel een redelijk complexe chatbot maken.
+                        De interface waarmee we de chatbot maken is heel verschillend van wat ik tot nu toe geprobeert
+                        heb.
+                    </p>
+                    <p>
+                        Ik heb hier een screenshot van de interface bij geplaatst.
+                    </p>
+                    <img src="../img/Botpress_interface.png" alt="interface chatbot builder van Botpress" />
+                    <p>
+                        Ik moet toegeven dat ik heel erg aangenaam verbaasd ben door dit framework. Ik heb voor de
+                        moment nog geen slechte punten gevonden. Natuurlijk is er één voordeel dat automatisch een
+                        nadeel met zich meebrengt namelijk dat wanneer een chatbot niet op de cloud gehost wordt, de
+                        deployment ervan iets moeilijker is. Ik ben dus niet volledig afhankelijk van een cloud platform
+                        maar zal wel mijn chatbot moeten hosten om het te kunnen laten uitproberen door testpersonen en
+                        om het op een webpagina te laten verschijnen.
+                    </p>
+                    <h2 class="section-heading">Voor- en Nadelen</h2>
+                    <p>
+                        Uit alle chatbot frameworks dat ik uitgeprobeert heb zijn er 4 dat ik onthoud als mogelijke
+                        keuzes. Deze frameworks zijn Amazon Lex, Dialogflow, Rasa en Botpress. Waarvan de twee eerste in
+                        deze lijst cloud gehoste applicaties zijn en de twee anderen open source zijn en lokaal op mijn
+                        pc kunnen runnen.
+                    </p>
+                    <h3 class="section-heading">Cloud gehoste chatbots</h3>
+                    <h4 class="section-heading">Amazon Lex</h4>
+                    <p>Voordelen</p>
+                    <ul>
+                        <li>Eenvoudig te gebruiken</li>
+                        <li>Veel mogelijke instellingen</li>
+                        <li>Weing/geen code schrijven</li>
+                        <li>Gemakkelijk om zaken op te slagen in een DB</li>
+                        <li>Alles wat nodig is voor deployment vindt je op AWS terug</li>
+                    </ul>
+                    <p>
+                        Nadelen
+                    </p>
+                    <ul>
+                        <li>Cloudgehost dus je bent afhankelijk van uw platform</li>
+                        <li>Ik heb een gelimiteerd aantal credits en weet niet wat er gebeurt wanneer ik er geen meer
+                            heb</li>
+                        <li>Documentatie is (volgens mij) niet gemakkelijk begrijpbaar</li>
+                        <li>Deployment op website ziet er niet eenvoudig uit</li>
+                    </ul>
+                    <h2 class="section-heading">Dialogflow</h2>
+                    <p>Voordelen</p>
+                    <ul>
+                        <li>Heel gemakkelijk te gebruiken</li>
+                        <li>Intuitieve interface</li>
+                        <li>Gemakkelijk deployen op website</li>
+                        <li>Weinig knoppen</li>
+                        <li>Geen code te schrijven</li>
+                    </ul>
+                    <p>Nadelen</p>
+                    <ul>
+                        <li>Om het layout van de chatbot te kunnen veranderen is het even moeilijk als op open source
+                            frameworks</li>
+                        <li>Afhankelijk van google</li>
+                    </ul>
+
+                    <h3 class="section-heading">Open Source frameworks</h3>
+                    <h4 class="section-heading">Rasa</h4>
+                    <p>Voordelen</p>
+                    <ul>
+                        <li>Toegang tot code (code op eigen computer)</li>
+                        <li>Niet afhankelijk van een platform</li>
+                        <li>Je kiest hoe je uw chatbot host</li>
+                        <li>Veel personalisatie mogelijk</li>
+                        <li>Goede interface wanneer Rasa x gebruikt wordt</li>
+                    </ul>
+                    <p>Nadelen</p>
+                    <ul>
+                        <li>Moeilijk te installeren</li>
+                        <li>Deployment is ingewikkeld</li>
+                        <li>Niet heel snel</li>
+                        <li>Minder intuitief dan Dialogflow en Botpress</li>
+                    </ul>
+
+                    <h4 class="section-heading">Botpress</h4>
+                    <p>Voordelen</p>
+                    <ul>
+                        <li>Zelfde voordelen als rasa</li>
+                        <li>Interface is beter dan die van rasa (volgens mij de beste interface)</li>
+                        <li>Applicatie is sneller dan rasa</li>
+                        <li>Chatbot builder interface is heel bruikelijk</li>
+                        <li>Goede documentatie</li>
+                    </ul>
+                    <p>Nadelen</p>
+                    <ul>
+                        <li>Deployment is moeilijker dan bij cloud platformen</li>
+                    </ul>
+
+                    <h2 class="section-heading">Voor- en Nadelen</h2>
+
+                    <p>
+                        Na het testen van 6 verschillende frameworks om chatbots te maken. Heb ik gekozen om voor dit
+                        project het framework Botpress te gebruiken. Dit framework heeft als belangrijk voordeel dat hij
+                        open source is en toch kwa interface en gebruikers ervaring zeker even goed is als amazon Lex en
+                        Tensorflow, ik zou zelfs zeggen dat naar mijn mening de interface van Botpress nog beter is, het
+                        opbouwen van een conversatie gaat vanzelf en de interface in schema vorm geeft een heel goed
+                        inzicht over de structuur van de chatbot. Indien ik Botpress niet op de laatste minuut
+                        uitgeprobeert zou hebben, zou ik waarschijnlijk voor Tensorflow gekozen hebben, de super snelle
+                        deployment van de chatbots is echt een enorm voordeel tegenover de andere frameworks dat ik
+                        uitgeprobeert heb. Bijna elke keer is het deployment proces het enige gedeelte van het framework
+                        waar alles opeens ingewikkeld wordt, terwijl het cruciaal is.
+                    </p>
+                    <p>
+                        Dit is dus het einde van al mijn testen van chatbot frameworks. Nu kan ik beginnen met het
+                        opbouwen van een conversatie structuur dat gebruikers zal helpen met alles wat betreft
+                        studiekeuzes.
+                    </p>
+                    <p>
+                        Naast al deze testen heb ik nog iets heel belangrijks begrepen. Ik moet toegeven dat toen ik dit
+                        project begon, een twijfel had over het echte nut van chatbots. Ik vroeg me af of deze niet een
+                        beetje nutteloos waren. Waarom zou ik met een chatbot discusseren terwijl ik alle informatie op
+                        mijn website terug kan vinden of dat ik gewoon een formulier zou kunnen invullen. Wel ik heb het
+                        antwoord hierop denk ik gevonden en het is redelijk voor de hand liggend. Het is veel
+                        aangenamer, het is gemakkelijker en met een chatbot discusseren is precies alsof we een spel
+                        spelen. Het maakt alles minder saai en monotoon. Het is leuker om aan een chatbot te vragen “wat
+                        zijn studiepunten?” en dan een kort antwoord te krijgen dat precies persoonlijk naar u gericht
+                        is, dan te gaan zoeken op een website naar waar je deze informatie eventueel zou kunnen vinden
+                        en als je het kan vinden eindelijk te kunnen lezen en daarna uw volgende vraag opzoeken. Dit is
+                        niet enkel saai en monotoon maar ook vermoeiend, misschien niet als je één vraag hebt, maar als
+                        je er drie hebt dan kan ik me heel gemakkelijk inbeelden dat je liever een chatbot zou
+                        gebruiken.
+                    </p>
+
+                    <p>
+                        Bedankt voor het lezen.
+                    </p>
+                    <p>Nicolas Pecher</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <p class="copyright text-muted">Copyright &copy; Final-work blog 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
