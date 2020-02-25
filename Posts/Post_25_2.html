@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Final Work blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Final Work</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Opbouw chatbot</h1>
+                        <h2 class="subheading">Deel 1</h2>
+                        <span class="meta">Posted by
+                            Nicolas Pecher
+                            on February 25, 2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <h2 class="section-heading">Welke taal voor de chatbot</h2>
+                    <p>
+                        Sinds vorige blogpost ben ik begonnen met het maken van mijn chatbot met botpress. Ik was eerst
+                        begonnen met het opmaken van mijn chatbot in het Engels, redelijk snel ben ik een probleem
+                        tegengekomen waaraan ik niet echt gedacht had, maar alle opleidingen op onderwijskiezer staan in
+                        het nederlands. Dit veroorzaakt dus een vervelende situatie waarbij alles wat de chatbot zegt in
+                        het engels staat behalve de opleidingen. Om dit probleem op te lossen dacht ik aan twee
+                        mogelijke opties: Ten Eerste kon ik de opleidingsnamen vertalen, wat leerlingen heel
+                        waarschijnlijk in de war zou hebben gebracht en het voor hun zeker niet gemakkelijker zou maken
+                        om de correcte vertaling terug te vinden om meer informatie te lezen. Of ik kon beslissen om
+                        mijn chatbot in het nederlands te maken, wat volgens mij veel logischer is. Ik heb dus voor de
+                        tweede optie gekozen. Oorspronkelijk had ik voor het engels gekozen omdat volgens mij de NLU
+                        (Natural Language Understanding) van de chatbot logisch gezien in deze taal beter was.
+                    </p>
+                    <h2 class="section-heading">Structuur V1 chatbot</h2>
+
+                    <p>
+                        In de allereerste versie van de chatbot verloopt het gesprek als volgt. In het begin presenteert
+                        de chatbot zich en legt hij een beetje uit wat hij kan doen. Daarna stelt hij de gebruiker voor
+                        om hem te helpen met zijn opleidingskeuze. Indien de gebruiker positief antwoordde, werd hem de
+                        vraag gesteld of hij het verschil tussen een professionele en academische bachelor kent, indien
+                        nodig kon de gebruiker de uitleg krijgen. Daarna vroeg de chatbot de gebruiker of hij een
+                        voorkeur had voor een van deze opties.
+                    </p>
+
+                    <p>
+                        Mijn doel hiermee was om vanaf het begin van de discussie al een grote opsplitsing te kunnen
+                        maken tussen academische en professionele bachelors. Wat de mogelijke opleidingen al meteen
+                        ongeveer door twee zou delen. Het probleem dat er volgens mij is door deze strategie is dat de
+                        opties in feite door twee gedeeld worden, maar dat zijn nog steeds 171 opleidingen voor
+                        academische bachelors en 178 voor professionele bachelors. Deze opsplising dat volgens mij op
+                        het eerste zicht redelijk logisch is, is misschien niet de beste. Ik moet namelijk na deze keuze
+                        nog vragen naar de interesses die de student heeft, pas hierna zal ik een beeld hebben van welke
+                        studierichting of studiegebied interessant zou kunnen zijn.
+                    </p>
+
+                    <p>
+                        Deze reflectie heeft geleid naar de tweede versie van de chatbot.
+                    </p>
+
+                    <h2 class="section-heading">Structuur V1.1 chatbot</h2>
+
+                    <p>
+                        Het begin van het gesprek met de chatbot is hetzelfde gebleven tot aan de tweede vraag, de
+                        chatbot vraagt nu nietmeer of de student het verschil kent tussen academische of professionele
+                        bachelor, maar of hij al een studiegebied (rechten, architectuur,onderwijs) heeft dat hem
+                        interesseert. Indien de gebruiker al een idee heeft van wat hem interesseert kan hij het gewoon
+                        schrijven. Hierna zal de chatbot proberen te zien tot welk studiegebied dit antwoord behoort,
+                        indien het studiegebied enkel één opleiding voorstelt zoals bijvoorbeeld: tandheelkunde,
+                        geneeskunde of productontwikkeling, dan zal de chatbot een link naar onderwijskiezer
+                        voorstellen, waar de student meer informatie kan lezen over deze richting. In het andere veel
+                        meer voorkomende geval, zal de student een link krijgen naar een lijst van opleidingen die tot
+                        het studiegebied behoren.
+                    </p>
+
+                    <h2 class="section-heading">Vervolg</h2>
+
+
+                    <p>In komende weken ga ik werken aan het scenario waarbij de student nog niet weet welk studiegebied
+                        hem interesseert. Hierna zal ik mijn chatbot proberen te hosten om het door mijn omgeving uit te
+                        laten testen en om zo een eerste feed-back te krijgen. Daarna zal ik aanpassingen maken en terug
+                        uit laten testen. Indien alles dan in orde is zal ik de chatbot door studenten in het secundair
+                        onderwijs uit laten testen. Aan de hand van deze test zal ik de laatste kleine aanpassingen
+                        maken om tot een goed afgewerkte chatbot te komen. </p>
+                    <p>
+                        Bedankt voor het lezen.
+                    </p>
+                    <p>Nicolas Pecher</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <p class="copyright text-muted">Copyright &copy; Final-work blog 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
