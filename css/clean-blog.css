@@ -72,6 +72,7 @@ blockquote {
   text-shadow: none;
 }
 
+
 img::-moz-selection {
   color: #fff;
   background: transparent;
