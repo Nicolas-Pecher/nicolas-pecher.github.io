@@ -1,0 +1,136 @@
+body{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#chatbotBox{
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#chatbot{
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#textChat{
+    display: flex;
+    flex-direction: row;
+    flex:9;
+}
+
+#oplaImg{
+    width: 250px;
+    position: fixed;
+    z-index: -1;
+    top: 25%;
+}
+
+#space{
+    flex: 1;
+}
+
+#messageBox{
+    flex: 2;
+    margin: 15px;
+    /*height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;*/
+}
+
+p.userText {
+    background-color:rgb(124, 188, 209)!important;
+    color: white;
+}
+
+#textChat p{
+    flex: 2;
+    font-size: 0.8em;
+    align-self: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+
+
+.botText:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-right-color: rgb(236, 236, 236);
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -15.5px;
+	margin-left: -25px;
+}
+
+.userText:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: rgb(124, 188, 209);
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-right: -20px;
+}
+
+#buttonBox{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+#buttonBox button{
+    flex: 1;
+    margin: 25px;
+}
+
+button{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: lightslategrey;
+    color: white;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    background-color:  rgb(236, 236, 236);
+    padding: 15px;
+    width: 60%;
+    margin:0px 25px;
+    
+}
+
+form{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
