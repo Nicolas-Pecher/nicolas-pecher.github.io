@@ -4,24 +4,65 @@ let data = {
 };
 
 let randomId = Math.random().toString(36).substr(2, 9);
-console.log(randomId);
+let hostUrl = 'http://' + window.location.hostname;
+
+function findUrls(message) {
+    try {
+        //url = message.match(/\(([^)]+)\)/)[1];
+        if (!message.includes('('))
+            return message;
+        
+        let urls = message.split('- ');
+        if (urls.length > 1) {
+            message = "";
+            urls.forEach(element => {
+                try {
+                    element = element.trim();
+                    element = element.substr(0, element.length - 1);
+                    [subject, url] = element.split('(');
+                    console.log(subject + `<a href="${url}" target="_blank">${url}</a>`);
+                    if(url) {
+                        message += subject + `<br /><a href="${url}" target="_blank">${url}</a><br /><br/>`;
+                    } else {
+                        message += subject + '<br/><br/>';
+                    }
+                        
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        if (urls.length == 1) {
+            url = message.match(/\(([^)]+)\)/)[1]
+            message = message.replace(`[${url}](${url})`, `<a href="${url}" target="_blank">${url}</a>`);
+            console.log(message);
+            //console.log(message + `<a href=${url} target='_blank'>${url}</a>`);
+            //return message + `<a href="${url}" target="_blank">${url}</a>`;
+        }
+    } catch (error) {
+    }
+    return message;
+}
 
 
-function writeText(message,type = 'default') {
+function writeText(message, type = 'default') {
     let messageBox = document.getElementById('messageBox');
     let newMessage = document.createElement('p');
 
-    if(type == 'user') {
-        newMessage.setAttribute('class','userText');
+    if (type == 'user') {
+        newMessage.setAttribute('class', 'userText');
     } else {
-        newMessage.setAttribute('class','botText');
+        message = findUrls(message);
+        console.log(message);
+        newMessage.setAttribute('class', 'botText');
     }
-    newMessage.textContent = message;
+    newMessage.innerHTML = message;
     messageBox.appendChild(newMessage);
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 function choiceBox(data) {
-    console.log(data.quick_replies);
 
     writeText(data.wrapped.text)
 
@@ -33,20 +74,20 @@ function choiceBox(data) {
         buttonBox.appendChild(replyButton);
 
         replyButton.addEventListener('click', () => {
-            console.log(replyButton.textContent);
             let answer = {
                 type: "text",
                 text: replyButton.textContent
             }
             sendMessage(answer);
             buttonBox.innerHTML = '';
-            writeText(replyButton.textContent,'user')
+            writeText(replyButton.textContent, 'user')
         })
     })
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 function sendMessage(message) {
-    fetch('http://ec2-3-89-183-161.compute-1.amazonaws.com:3000/api/v1/bots/opla/converse/' + randomId, {
+    fetch('http://localhost:3000/api/v1/bots/opla_v11/converse/' + randomId, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,16 +112,18 @@ function sendMessage(message) {
         });
 }
 
-document.getElementById('inputForm').addEventListener('submit', (e) =>{
+document.getElementById('inputForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const input = document.getElementById("chatInput").value
-    writeText(input,'user')
+    writeText(input, 'user')
     let answer = {
         type: "text",
         text: input
     }
     sendMessage(answer);
 })
+
+console.log(window.location.hostname);
 
 //start application
 sendMessage(data);

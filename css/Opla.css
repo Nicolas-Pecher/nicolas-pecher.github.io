@@ -29,6 +29,33 @@ body{
     top: 25%;
 }
 
+@media only screen and (max-width: 500px) {
+    #oplaImg{
+        width: 150px;
+        position: fixed;
+        z-index: -1;
+        top: 25%;
+    }
+
+    #buttonBox button{
+        margin: 10px !important;
+    }
+    
+    button{
+        padding: 5px 10px !important;
+        font-size: 0.8em !important;
+    }
+
+    #chatbotBox{
+        display: block;
+    }
+
+    #messagebox{
+        min-height: 80%;
+    }
+
+}
+
 #space{
     flex: 1;
 }
@@ -36,9 +63,6 @@ body{
 #messageBox{
     flex: 2;
     margin: 15px;
-    /*height: 500px;
-    overflow: scroll;
-    overflow-x: hidden;*/
 }
 
 p.userText {
@@ -58,7 +82,10 @@ p.userText {
     position: relative;
     margin-top: 15px;
     margin-bottom: 15px;
-    
+}
+
+#textChat a{
+    word-break: break-all;
 }
 
 
